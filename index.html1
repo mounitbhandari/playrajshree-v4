@@ -1,0 +1,644 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+
+    <style type="text/css">
+    /*<![CDATA[*/
+        #body{
+            height: 545px;
+            width: 905px;
+            background-color: white;
+            border: 2px solid #b00000;
+            margin-left: 210px;
+            margin-top: -1px;
+            box-shadow: 0px 0px 8px 2px #b30000;
+        }
+        .contain{
+            height: 180px;
+            background-color: #bb0000;
+            width: auto;
+        }
+        .logo{
+            margin-left: -700px;
+        }
+        #header{
+            margin-top: -50px;
+            margin-left: 10px;
+        }
+        .date{
+            margin-top: -100px;
+            margin-left: -360px;
+            color: white;
+            }
+        .timer td{
+            padding: 20px;
+                }   
+        #logindiv{
+            margin-top: -120PX;
+            margin-left: 700px;
+        }   
+        
+        #logindiv input.button{
+            margin-top: 8px;
+            }   
+        #cssmenu{
+            height: 37px;
+            display: block;
+            border: 2px solid;
+            border-radius: 5px;
+            width: auto;
+            border-color: #33FF00;
+            margin-top: -1px;
+            padding: 0;
+            text-align:center;
+            background-color: #324137;
+                }   
+        #cssmenu ul{
+            display: inline-block;
+            list-style-type: none;
+        }
+        #cssmenu ul li{
+            display: inline-block;
+            }
+        #cssmenu > ul {
+            list-style: inside none;
+            margin: 0;
+            padding: 0;
+                }
+        #cssmenu > ul > li {
+          list-style: inside none;
+          float: left;
+          display: inline-block;
+          position: relative;
+          margin-left: -5px;
+          padding: 0;
+        }
+        #cssmenu.align-center > ul {
+          text-align: center;
+        }
+        #cssmenu.align-center > ul > li {
+          float: none;
+          margin-left: -3px;
+        }
+        #cssmenu.align-center ul ul {
+          text-align: left;
+        }
+        #cssmenu.align-center > ul > li:first-child > a {
+          border-radius: 0;
+        }
+        #cssmenu > ul > li > a {
+          outline: none;
+          display: block;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+          font-weight: 700;
+          font-size: 13px;
+          font-family: Arial, Helvetica, sans-serif;
+          border-right: 1px solid #080808;
+          color: #CCFF00;
+          padding: 12px 20px;
+            }   
+        #maindiv table{
+            margin-left: -60px;
+            margin-top: 8px;
+        }
+        #maindiv table input{
+            width: 35px;
+            height: 25px;
+            background-color: #eceeed;
+                }
+        #result{
+            margin-top: -226px;
+            margin-right: 15px;
+            height: 165px;
+            width: 60px;
+            float: right;
+            }
+        #result p{  
+            color: #9d0000;
+            margin-top: -46px;
+            background-color: #fbf880;
+                    }
+        
+        #result #frstrst{
+            padding-top: 23px;
+            
+        }
+        #result table #scndrst{
+            margin-top: 8px;
+        }
+        .main-last{
+            background-color: #ffffff;
+            width: 850px;
+            height: 50px;
+            margin-top: 28px;
+        }   
+        #clr{
+            margin-left: 680px;
+            margin-top: -20px;
+        }
+        #print{
+            margin-left: 760px;
+            margin-top: -21px;
+        }
+        #details{
+            height: 55px;
+            width: auto;
+            background-color: #bb0000;
+            margin-top: -15px;
+                }
+        #details p{
+            color: white;
+            font-size: 11px;
+            text-align: center;
+            padding-top: 5px;
+            }
+        .second-p{
+            color: white;
+            font-size: 11px;
+            margin-top: -28px;
+            margin-left: 510px;
+            }
+        .third-p{
+            color: white;
+            font-size: 11px;
+            margin-top: -15px;
+            margin-left: 510px;
+            }   
+            
+        /*]]>*/
+            </style>
+    <script type="text/javascript">
+    //<![CDATA[
+        $(document).ready(function(){
+        /*document.getElementById("demo").innerHTML =*/
+        var a=Math.floor(Math.random() * 10);
+        var b=Math.floor(Math.random() * 10);
+        var c=Math.floor(Math.random() * 10);
+        //alert(a);
+        $('#res_a').html(a);
+        $('#res_d').html(a);
+        $('#res_b').html(b);
+        $('#res_e').html(b);
+        $('#res_c').html(c);
+        $('#res_f').html(c);
+        });
+        //document.getElementById("res").innerHTML=a;
+        
+        
+        
+        $.fn.fonkTopla = function() {
+    var gQty = 0;
+    this.each(function() {
+       var deger = fonkDeger($(this).val());
+       gQty += deger;
+    });
+    return gQty;
+    };
+
+
+    function fonkDeger(veri) {
+        return (veri != '') ? parseInt(veri) : 0;
+    }
+
+    $(document).ready(function(){
+    $('input[name^="g1"]').bind('keyup', function() {
+       $('#gQty').val( $('input[name^="g1"]').fonkTopla());
+    });
+    });
+    
+    
+    
+    
+    
+    $.fn.fonkTopla = function() {
+    var bQty = 0;
+    this.each(function() {
+       var deger = fonkDeger($(this).val());
+       bQty += deger;
+    });
+    return bQty;
+    };
+
+
+    function fonkDeger(veri) {
+        return (veri != '') ? parseInt(veri) : 0;
+    }
+
+    $(document).ready(function(){
+    $('input[name^="b1"]').bind('keyup', function() {
+       $('#bQty').val( $('input[name^="b1"]').fonkTopla());
+    });
+    });
+    
+    
+    
+    $.fn.fonkTopla = function() {
+    var rQty = 0;
+    this.each(function() {
+       var deger = fonkDeger($(this).val());
+       rQty += deger;
+    });
+    return rQty;
+    };
+
+
+    function fonkDeger(veri) {
+        return (veri != '') ? parseInt(veri) : 0;
+    }
+
+    $(document).ready(function(){
+    $('input[name^="r1"]').bind('keyup', function() {
+       $('#rQty').val( $('input[name^="r1"]').fonkTopla());
+    });
+    });
+    
+    
+    
+if (document.getElementById) onload = function () {
+    setInterval ("document.getElementById ('ctym').firstChild.data = new Date().toLocaleString()", 50)
+                                                    }
+    
+    
+    
+    
+    
+    
+    // Set the date we're counting down to
+var countDownDate = new Date("Jan 8, 2019 21:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 15)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+    
+    
+        //]]>
+            </script>
+    <style type="text/css">
+    /*<![CDATA[*/
+ div.c27 {text-align: center}
+ table.c26 {text-align:center;color:#990000}
+ td.c25 {background-repeat: repeat-y; background-image:url('image/res_back_vertical.png'); background-position:center; width:50px; height:42px; color:#990000; font-size:18px}
+ table.c24 {font-size:16px}
+ input.c23 {text-align:right}
+ td.c22 { font-size:16px}
+ td.c21 {border:1px solid #FFFF99; font-size:16px}
+ td.c20 {padding-left:15px; color:#FF6600; font-size:16px}
+ tr.c19 {font-size:16px; color:#FF3300}
+ ul.c18 {text-align: left}
+ div.c17 {text-align: left}
+ input.c16 {height:20px; width:60px; padding:0px}
+ span.c15 { font-size:18px; color:#FFFFFF}
+ span.c14 { font-size:14px; color:#FFFFFF}
+ table.c13 {color:#990000; text-align:center; font-size:14px;}
+ td.c12 {background-repeat: repeat-y; background-image:url('image/res_back.png');width:50px; height:40px; font-size:18px}
+ td.c11 {background-repeat: repeat-y; background-image:url('image/gb_back.png');width:50px; height:40px}
+ div.c10 {background-color:#990000}
+ marquee.c9 { font-family:Verdana; color:#00000}
+ span.c8 {color: #FFFFFF }
+    /*]]>*/
+            </style>
+  </head>
+
+  <body>
+    <div class="c10">
+      <marquee id="a" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();" class="c9"><span class="c8">WELCOME TO GOASTAR &#160;&#160;</span></marquee>
+    </div>
+
+    <div id="body" class="c27">
+      <div class="contain">
+        <div class="logo">
+          <img src="image/logo.png" />
+        </div>
+
+        <div class="date">
+          <strong><span id="date-time">Time: 09:30 PM</span></strong>
+        </div>
+
+        <div id="header">
+          <table class="c13">
+            <tbody>
+              <tr>
+                <td class="c11">AP</td>
+
+                <td class="c11">JP</td>
+
+                <td class="c11">7S</td>
+              </tr>
+
+              <tr>
+                <td class="c12"><span id="res_a"></span></td>
+
+                <td class="c12"><span id="res_b"></span></td>
+
+                <td class="c12"><span id="res_c"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="timer">
+          <table>
+            <tbody>
+              <tr>
+                <td align="left"><span class="c14">Current Date &amp; Time<strong><br />
+                 <span id="ctym">12:56 PM</span></strong></span></td>
+
+                <td align="center"><span class="c15">Draw Time<strong><br />
+                 01:00 PM</strong></span></td>
+
+                <td align="right"><span class="c14">Time Remaining</span><br />
+                <br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="logindiv" class="c17">
+          <span class="c14">Card No</span> &#160;&#160;<br />
+           <input type="text" id="cardno" name="cardno" /><br />
+           <span class="c14">Pin No</span> &#160;&#160;<br />
+           <input type="password" id="pinno" name="pinno" /><br />
+           <input name="btnLogin" type="submit" class="button c16" value="Login" />
+        </div>
+      </div>
+
+      <div id="cssmenu">
+        <ul class="c18">
+          <li><a href="#">Result</a></li>
+
+          <li><a href="#">Report</a></li>
+
+          <li><a href="#">Gems</a></li>
+        </ul>
+      </div>
+
+      <div id="maindiv">
+        <table border="0" cellpadding="0" cellspacing="4" class="c24">
+          <tbody>
+            <tr align="center" class="c19">
+              <td>
+              </td>
+
+              <td bgcolor="#FFFF99">MRP</td>
+
+              <td bgcolor="#FFFF99">&#160;Win&#160;</td>
+
+              <td bgcolor="#FFFF99">1</td>
+
+              <td bgcolor="#FFFF99">2</td>
+
+              <td bgcolor="#FFFF99">3</td>
+
+              <td bgcolor="#FFFF99">4</td>
+
+              <td bgcolor="#FFFF99">5</td>
+
+              <td bgcolor="#FFFF99">6</td>
+
+              <td bgcolor="#FFFF99">7</td>
+
+              <td bgcolor="#FFFF99">8</td>
+
+              <td bgcolor="#FFFF99">9</td>
+
+              <td bgcolor="#FFFF99">0</td>
+
+              <td bgcolor="#FFFF99">Qty</td>
+
+              <td bgcolor="#FFFF99">Amount</td>
+            </tr>
+
+            <tr height="5px">
+              <td colspan="16"><br />
+              </td>
+            </tr>
+
+            <tr height="45px">
+              <td background="image/buttonshape.png" class="c20"><strong>AP Gold(AP)</strong></td>
+
+              <td class="c21" align="center">11</td>
+
+              <td align="center" class="c22">100</td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="g1" name="g1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="gQty" name="gQty" class="numQty c23" disabled="disabled" /></td>
+
+              <td align="center"><input type="text" id="gAmt" name="gAmt" class="numAmt c23" disabled="disabled" /></td>
+            </tr>
+
+            <tr height="45px">
+              <td background="image/buttonshape.png" class="c20"><strong>Goa-Jackpot(JP)</strong></td>
+
+              <td class="c21" align="center">11</td>
+
+              <td align="center" class="c22">100</td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="b1" name="b1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="bQty" name="bQty" class="numQty c23" disabled="disabled" /></td>
+
+              <td align="center"><input type="text" id="bAmt" name="bAmt" class="numAmt c23" disabled="disabled" /></td>
+            </tr>
+
+            <tr height="45px">
+              <td background="image/buttonshape.png" class="c20"><strong>7Star(7S)</strong></td>
+
+              <td class="c21" align="center">11</td>
+
+              <td align="center" class="c22">100</td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="r1" name="r1" class="numinput" maxlength="3" /></td>
+
+              <td align="center"><input type="text" id="rQty" name="rQty" class="numQty c23" disabled="disabled" /></td>
+
+              <td align="center"><input type="text" id="rAmt" name="rAmt" class="numAmt c23" disabled="disabled" /></td>
+            </tr>
+
+            <tr height="45px">
+              <td colspan="3">
+              </td>
+
+              <td colspan="5">
+              </td>
+
+              <td colspan="3">
+              </td>
+
+              <td>
+              </td>
+
+              <td>Total</td>
+
+              <td align="center"><input type="text" id="totalQty" name="totalQty" class="numQty c23" disabled="disabled" /></td>
+
+              <td align="center"><input type="text" id="totalAmt" name="totalAmt" class="numAmt c23" disabled="disabled" /></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <tr>
+            <td>
+              <div id="result" class="c27">
+                <div id="frstrst">
+                  <div id="scndrst">
+                    <div id="trdrst">
+                      <table>
+                        <tr>
+                          <td id="res_f" class="c25">
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td><br />
+                          <br />
+                          <br />
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <div class="main-last">
+                      <div id="slot" class="c17">
+                        <input type="button" name="advbtn" id="advbtn" onclick="advance_slot(1)" class="button" value="Advance Slot" />
+                      </div>
+
+                      <div id="clr" class="c17">
+                        <input type="button" onclick="ClearAllControls()" class="button" value="Clear All" />
+                      </div>
+
+                      <div id="print" class="c17">
+                        <input type="button" onclick="print_ticket()" class="button" value="Print" />
+                      </div>
+                    </div>
+
+                    <div id="details">
+                      <p>Purchase of lottery using this website is strictly prohibited in the states where lotteries are banned.</p>
+                      <br />
+                       
+
+                      <div class="second-p">
+                        You must be above 18 years to play online lottery.
+                      </div>
+                      <br />
+                       
+
+                      <div class="third-p">
+                        @Copyright2016 All rights reserved to Goagames.pvt.
+                      </div>
+                    </div>
+
+                    <table>
+                      <tr>
+                        <td id="res_e" class="c25">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <table>
+                    <tr>
+                      <td id="res_d" class="c25">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <table class="c26">
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <p><strong>RESULT</strong></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+
