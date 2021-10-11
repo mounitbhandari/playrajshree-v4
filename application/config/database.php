@@ -76,16 +76,16 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	/*SERVER*/
-	//'hostname' => 'localhost',
-	//'username' => 'gamepane_playrajshreegoa_v1_root',
-	//'password' => 'Qnay{)&_O4HN',
-	//'database' => 'gamepane_playrajshreegoa_v1_db',
+	'hostname' => 'localhost',
+	'username' => 'gamepane_playrajshreegoa_v4_root',
+	'password' => '*mRd82=i2v]5',
+	'database' => 'gamepane_playrajshreegoa_v4_db',
 	
 	/*LOCAL*/
- 	'hostname' => '127.0.0.1',
- 	'username' => 'root',
- 	'password' => 'sukantahui',
- 	'database' => 'gamepane_playrajshreegoa_v1_db',
+ 	//'hostname' => '127.0.0.1',
+ 	//'username' => 'root',
+ 	//'password' => 'sukantahui',
+ 	//'database' => 'gamepane_playrajshreegoa_v1_db',
 
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
