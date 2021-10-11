@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "gamepane_playrajshreegoa_v1_root";
-$password = "Qnay{)&_O4HN";
-$dbname = "gamepane_playrajshreegoa_v1_db";
+$username = "gamepane_playrajshreegoa_v4_root";
+$password = "*mRd82=i2v]5";
+$dbname = "gamepane_playrajshreegoa_v4_db";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
