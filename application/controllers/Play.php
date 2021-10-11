@@ -218,7 +218,7 @@ class Play extends CI_Controller {
                                                             <td class="result-page font-weight-bold" style="background-size: 55px 55px; width:55px; height:55px;"> <strong>SA</strong><br><span style="font-size:14px">20-29</span> </td>
                                                             <td class="result-page font-weight-bold" style="background-size: 55px 55px; width:55px; height:55px;"><strong>RA</strong><br><span style="font-size:14px">10-19</span> </td>
                                                             <td class="result-page font-weight-bold" style="background-size: 80px 100px; width:80px; height:90px; " rowspan="2"><strong style="font-size:22px;"> GOA </strong><br> Star </td>
-                                                            <td class="result-page font-weight-bold" style="background-size: 55px 55px; width:55px; height:55px; font-size:20pt; color: rgb(255,0,0);"><span id="star3_single">{{sum}}</span></td>
+                                                            <td class="result-page font-weight-bold" style="background-size: 55px 55px; width:55px; height:55px; font-size:20pt; color: rgb(255,0,0);"><span id="star3_single" ng-if="winningValue.length>0">{{sum}}</span></td>
                                                         </tr>
                                                     <tr>
                                                                 <td class="result-in-top font-weight-bold"><span id="result_GA">
